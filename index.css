@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*  CSS for the header on the login Page */
+h2{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}
+/* CSS for Where the username etc Entered */
+/* Main Div for the log in page */
+.content{
+    display: flex;
+    justify-content: center;
+}
+/* Section for the information including the username and Password Field */
+div.main{
+width: 300px;
+justify-content: center;
+padding: 10px 50px 25px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top:50px;
+}
+/* CSS for the text input field */
+input[type=text],input[type=password]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+/* CSS for the Button on the page */
+input[type=button]{
+font-size: 16px;
+background: red;
+color: black;
+cursor: pointer;
+width: 40%;
+border-radius: 5px;
+padding: 10px 0;
+}
