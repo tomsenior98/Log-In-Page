@@ -2,7 +2,8 @@ var attempt = 3;
 function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
-if ( username == "tsenior18" && password == "password"){
+// Creates the statment to store the credentials on the system
+if ( username == "tsenior18" && password == "Mexico2019" || username == "Guest" && password == "Guest2019"){
 alert ("Login successfully");
 window.location = "welcome.html"; // Redirecting to other page.
 return false;
