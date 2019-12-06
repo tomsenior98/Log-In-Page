@@ -1,0 +1,21 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-image: linear-gradient(to left, #abaada, #a3a7d4, #9ca4cd, #95a0c7, #8f9dc0, #8a9aba, #8696b3, #8293ad, #7f8fa5, #7c8c9d, #7a8896, #79848e);
+    height: 100vh;
+    width:100%;
+}
+/* CSS for the header */
+header{
+    display: flex;
+    justify-content: center;
+    margin:1%;
+}
+#title{
+    color:black;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}

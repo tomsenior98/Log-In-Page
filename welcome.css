@@ -42,3 +42,9 @@ section-2{
     margin: 5%;
     padding: 1%;   
 }
+
+/* CSS for the img zoom */
+
+img:hover {
+    transform: scale(1.2);
+}
