@@ -1,7 +1,44 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    height:100vh;
+    margin: 0;
+    padding: 0;
 }
-/* CSS for the header */
+body{
+    background-image: linear-gradient(to left, #abaada, #a3a7d4, #9ca4cd, #95a0c7, #8f9dc0, #8a9aba, #8696b3, #8293ad, #7f8fa5, #7c8c9d, #7a8896, #79848e);
+    height: 100vh;
+    width:100%;
+}
+/* CSS for the header of the page */
+header{
+    width:100%;
+    height:15vh;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+#title{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+/* CSS for the deck of cards Linking to other pages */
+section-1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* CSS for the second sub title  */
+.subtitle{
+    color:black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+/* CSS for the card images */
+section-2{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    padding: 1%;   
+}
