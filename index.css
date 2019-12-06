@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 /*  CSS for the header on the login Page */
+body{
+    background: lightblue;
+}
 h2{
-background-color: #FEFFED;
+background-color: red;
 padding: 30px 35px;
 margin: -10px -50px;
 text-align:center;
