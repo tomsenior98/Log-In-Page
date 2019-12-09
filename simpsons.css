@@ -43,3 +43,15 @@ main{
 }
 
 /* CSS for the buttons */
+
+buttons,.button{
+    display: flex;
+    justify-content: center;
+}
+
+#call-card, #toggle{
+    width: 200px;
+    background: chartreuse;
+    margin: 10%;
+    height: 25px;
+}
