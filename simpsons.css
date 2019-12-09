@@ -14,8 +14,32 @@ header{
     justify-content: center;
     margin:1%;
 }
+/* CSS for the header of the Simpsons Page */
 #title{
-    color:black;
+    color:blue;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
+#title span {
+    color: yellow;
+}
+
+/* CSS for the main images and the two decks on the screen */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.Deck-1 {
+    display: flex;
+    margin: 3%;
+    position: relative;
+}
+.Deck-2 {
+    display: flex;
+    margin: 3%;
+    position: relative;
+}
+
+/* CSS for the buttons */
