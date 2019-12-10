@@ -43,14 +43,39 @@ const array  = [
     ];
 
 let player2 = array.splice(0, Math.ceil(array.length/2))
-console.log(array)
-console.log("NEXT")
-console.log(player2)
+console.log(array);
+console.log("NEXT");
+console.log(player2);
 
-function player1Deck(array) {
-    document.getElementById('image1').innerHTML = array;
+// Function for calling the image based on the split array
+function chooseCard(array,player2) {
+    let image1 = document.getElementById('image1');
+    let image2 = document.getElementById('image2');
+    console.log(array[0].name)
+    console.log(player2[0].name)
+    image1.src = `images/Simpsons/${array[0].name}.jpg`;
+    image2.src = `images/Simpsons/${player2[0].name}.jpg`;
 }
 
-function player2Deck(player2) {
-    document.getElementById('image2').innerHTML = player2;   
+let choose = document.getElementById("call-card")
+choose.addEventListener("click", function() {
+    chooseCard(array, player2)
+})
+
+function compare(array,player2) {
+    if (array[0].lovable > player2[0].lovable) {
+       array[0].push(player2[0])
+       player2.shift()
+       let top = array.shift()
+       array.push(top)
+    }
 }
+compare();
+
+// JS for the compare card - including the event listener
+let compared = document.getElementById('value')
+
+compared.addEventListener("click", function() {
+    compare(array, player2);
+    compare();
+})

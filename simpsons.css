@@ -49,7 +49,7 @@ buttons,.button{
     justify-content: center;
 }
 
-#call-card, #toggle{
+#call-card, #toggle, #value{
     width: 200px;
     background: chartreuse;
     margin: 10%;
