@@ -54,4 +54,6 @@ buttons,.button{
     background: chartreuse;
     margin: 10%;
     height: 25px;
+    border-radius: 10%;
+    position: relative;
 }
