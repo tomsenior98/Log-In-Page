@@ -9,7 +9,7 @@ class Deck {
         this.fame = fame;
     }
 }
-const array  = [
+const array = [
     new Deck("grampa", 68, 56, 66, 76, 78, 86),
     new Deck("apu", 78, 96, 78, 52, 88, 68),
     new Deck("barney", 86, 50, 96, 86, 74, 80),
@@ -27,7 +27,7 @@ const array  = [
     new Deck("maggie", 100, 54, 46, 74, 60, 92),
     new Deck("marge", 94, 94, 68, 46, 62, 90),
     new Deck("martin", 80, 80, 90, 70, 72, 52),
-    new Deck("millhouse", 78, 84, 74, 88, 68, 62),
+    new Deck("milhouse", 78, 84, 74, 88, 68, 62),
     new Deck("moe", 76, 72, 44, 72, 82, 82),
     new Deck("ned", 52, 88, 84, 98, 42, 74),
     new Deck("nelson", 32, 20, 67, 89, 56, 39),
@@ -40,42 +40,41 @@ const array  = [
     new Deck("snowball", 88, 42, 52, 58, 52, 56),
     new Deck("waylon", 56, 40, 82, 92, 58, 42),
     new Deck("radioactive", 97, 85, 94, 50, 95, 98)
-    ];
+];
 
-let player2 = array.splice(0, Math.ceil(array.length/2))
+let player2 = array.splice(0, Math.ceil(array.length / 2))
 console.log(array);
 console.log("NEXT");
 console.log(player2);
-
 // Function for calling the image based on the split array
-function chooseCard(array,player2) {
+let choose = document.getElementById("call-card")
+choose.addEventListener("click", function () {
     let image1 = document.getElementById('image1');
     let image2 = document.getElementById('image2');
-    console.log(array[0].name)
-    console.log(player2[0].name)
-    image1.src = `images/Simpsons/${array[0].name}.jpg`;
-    image2.src = `images/Simpsons/${player2[0].name}.jpg`;
-}
+    image1.src = `images/simpson/${array[0].name}.jpg`;
+    image2.src = `images/simpson/${player2[0].name}.jpg`;
 
-let choose = document.getElementById("call-card")
-choose.addEventListener("click", function() {
-    chooseCard(array, player2)
 })
-
-function compare(array,player2) {
-    if (array[0].lovable > player2[0].lovable) {
-       array[0].push(player2[0])
-       player2.shift()
-       let top = array.shift()
-       array.push(top)
-    }
-}
-compare();
-
-// JS for the compare card - including the event listener
 let compared = document.getElementById('value')
+function compareCard() {
+    compared.addEventListener("click", () => {
+        if (array[0].lovable > player2[0].lovable) {
+            array.push(player2[0])
+            player2.shift()
+            let winner = array.shift()
+            array.push(winner)
+            document.getElementById('player1 deckLength').innerHTML = array.length;
+            document.getElementById('player2 deckLength').innerHTML = player2.length;
+        }
+        else {
+            player2.push(array[0]);
+            array.shift()
+            let winner = player2.shift()
+            player2.push(winner)
+        }
+    })
+};
 
-compared.addEventListener("click", function() {
-    compare(array, player2);
-    compare();
-})
+
+compareCard();
+
