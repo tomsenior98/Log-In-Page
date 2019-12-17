@@ -25,6 +25,9 @@ const array = [
     new Deck("lenny", 82, 60, 54, 94, 56, 54),
     new Deck("lisa", 98, 98, 48, 42, 96, 94),
     new Deck("maggie", 100, 54, 46, 74, 60, 92),
+];
+
+const player2 = [
     new Deck("marge", 94, 94, 68, 46, 62, 90),
     new Deck("martin", 80, 80, 90, 70, 72, 52),
     new Deck("milhouse", 78, 84, 74, 88, 68, 62),
@@ -40,12 +43,8 @@ const array = [
     new Deck("snowball", 88, 42, 52, 58, 52, 56),
     new Deck("waylon", 56, 40, 82, 92, 58, 42),
     new Deck("radioactive", 97, 85, 94, 50, 95, 98)
-];
 
-let player2 = array.splice(0, Math.ceil(array.length / 2))
-console.log(array);
-console.log("NEXT");
-console.log(player2);
+]
 // Function for calling the image based on the split array
 let choose = document.getElementById("call-card")
 choose.addEventListener("click", function () {
@@ -55,16 +54,16 @@ choose.addEventListener("click", function () {
     image2.src = `images/simpson/${player2[0].name}.jpg`;
 
 })
-let compared = document.getElementById('value')
+
+let compare = document.getElementById('value')
 function compareCard() {
-    compared.addEventListener("click", () => {
-        if (array[0].lovable > player2[0].lovable) {
-            array.push(player2[0])
-            player2.shift()
+    compare.addEventListener('click', () => {
+        if (array.loveable > player2.lovable) {
+            array.push(player2)
+            array.shift()
             let winner = array.shift()
-            array.push(winner)
-            document.getElementById('player1 deckLength').innerHTML = array.length;
-            document.getElementById('player2 deckLength').innerHTML = player2.length;
+            document.getElementById('player1 deckLength').innerHTML = array.length
+            document.getElementById('player2 deckLength').innerHTML = player2.length
         }
         else {
             player2.push(array[0]);
@@ -72,9 +71,4 @@ function compareCard() {
             let winner = player2.shift()
             player2.push(winner)
         }
-    })
-};
-
-
-compareCard();
-
+    compareCard()
