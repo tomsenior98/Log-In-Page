@@ -71,3 +71,4 @@ function compareCard() {
             let winner = player2.shift()
             player2.push(winner)
     }})}
+    dcvsdv
